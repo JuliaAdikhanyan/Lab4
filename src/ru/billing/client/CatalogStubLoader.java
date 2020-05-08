@@ -8,6 +8,7 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class CatalogStubLoader implements CatalogLoader {
+
     @Override
     public void load(ItemCatalog cat) {
         // "ручной" способ загрузки каталога
