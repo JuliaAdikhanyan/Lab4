@@ -5,9 +5,9 @@ import java.util.HashMap;
 
 public class ItemCatalog {
     // данная коллекция оптимальна для последующего поиска товаров в каталоге
-    private HashMap<Integer, GenericItem> catalog = new HashMap<Integer, GenericItem>();
+    private HashMap<Integer, GenericItem> catalog = new HashMap<>();
     // следующая коллекция нужна для сравнения с предыдущей
-    private ArrayList<GenericItem> arrayCatalog = new ArrayList<GenericItem>();
+    private ArrayList<GenericItem> arrayCatalog = new ArrayList<>();
 
     // добавляем товар в каталог
     public void addItem(GenericItem item) {
@@ -25,11 +25,7 @@ public class ItemCatalog {
     // поиск в каталоге по ID
     public GenericItem findItemByID(int id) {
         // если нет такого ID, возвращаем пустое значение
-        if (!catalog.containsKey(id)) {
-            return null;
-        } else {
-            return catalog.get(id);
-        }
+        return catalog.getOrDefault(id, null);
     }
 
     // поиск в каталоге по ID
