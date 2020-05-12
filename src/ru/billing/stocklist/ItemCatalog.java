@@ -1,13 +1,14 @@
 package ru.billing.stocklist;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import ru.billing.client.CatalogLoader;
+
+import java.util.*;
 
 public class ItemCatalog {
     // данная коллекция оптимальна для последующего поиска товаров в каталоге
-    private HashMap<Integer, GenericItem> catalog = new HashMap<>();
+    private Map<Integer, GenericItem> catalog = new HashMap<>();
     // следующая коллекция нужна для сравнения с предыдущей
-    private ArrayList<GenericItem> arrayCatalog = new ArrayList<>();
+    private List<GenericItem> arrayCatalog = new ArrayList<>();
 
     // добавляем товар в каталог
     public void addItem(GenericItem item) {
@@ -38,11 +39,11 @@ public class ItemCatalog {
         return null;
     }
 
-    public HashMap<Integer, GenericItem> getHashMap() {
+    public Map<Integer, GenericItem> getHashMap() {
         return catalog;
     }
 
-    public ArrayList<GenericItem> getArrayList() {
+    public List<GenericItem> getArrayList() {
         return arrayCatalog;
     }
 }
