@@ -10,7 +10,7 @@ public class GenericItem implements Cloneable {
 
     // конструктор №1
     public GenericItem(String tempName, float tempPrice, Category tempCategory) {
-        id = currentID++;
+        this();
         name = tempName;
         price = tempPrice;
         category = tempCategory;
@@ -18,7 +18,7 @@ public class GenericItem implements Cloneable {
 
     // конструктор №2
     public GenericItem(String tempName, float tempPrice, GenericItem tempAnalog) {
-        id = currentID++;
+        this();
         name = tempName;
         price = tempPrice;
         analog = tempAnalog;
